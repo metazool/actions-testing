@@ -22,6 +22,5 @@ jobs:
           ls
           echo 'fastai 1.*' >>  $CONDA/conda-meta/pinned
           which pip
-          ls /usr/share/miniconda/bin
-          conda install pip
+          export PATH=/usr/share/miniconda/bin:$PATH
           which pip
