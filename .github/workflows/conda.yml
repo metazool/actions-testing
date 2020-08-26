@@ -11,15 +11,13 @@ jobs:
 
       - name: Use anaconda
         uses: s-weigand/setup-conda@v1
-        
+
       - name: find the meta dir
         run: |
           which python
           conda create -n core_env
+          conda init bash
           conda activate core_env
           echo $CONDA_PREFIX
           echo 'fastai 1.*' >> $CONDA_PREFIX/conda-meta/pinned
           ls
-          ls ~/miniconda
-          
-          
