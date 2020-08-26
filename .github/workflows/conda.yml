@@ -1,0 +1,19 @@
+name: Run tests
+on: push
+
+jobs:
+  test:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Use anaconda
+        uses: s-weigand/setup-conda@v1
+        
+      - name: find the meta dir
+        run: |
+          which python
+          find / -name conda-meta
+          
