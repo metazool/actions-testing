@@ -15,6 +15,7 @@ jobs:
       - name: find the meta dir
         run: |
           conda activate /github/home/myenv
+          conda init bash
           which python
           echo $CONDA_PREFIX
           echo 'fastai 1.*' >>  /github/home/myenv/conda-meta/pinned
