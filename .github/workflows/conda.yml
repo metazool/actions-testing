@@ -17,5 +17,6 @@ jobs:
       - name: find the meta dir
         run: |
           echo $CONDA_PREFIX
-          echo 'fastai 1.*' >>  $CONDA_PREFIX/conda-meta/pinned
+          ls /home/runner/.conda/envs
+          #echo 'fastai 1.*' >>  $CONDA_PREFIX/conda-meta/pinned
           ls
