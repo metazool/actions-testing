@@ -15,5 +15,7 @@ jobs:
       - name: find the meta dir
         run: |
           which python
-          find / -name conda-meta
+          ls
+          ls ~/miniconda
+          
           
