@@ -10,13 +10,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: conda
-        uses: matthewrmshin/conda-action@v1
+        uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
 
       - name: find the meta dir
         run: |
-          conda init bash
-          conda activate /github/home/myenv
-          which python
+          conda info
           echo $CONDA_PREFIX
-          echo 'fastai 1.*' >>  /github/home/myenv/conda-meta/pinned
+          echo 'fastai 1.*' >>  $CONDA_PREFIX/conda-meta/pinned
           ls
